@@ -1,8 +1,6 @@
-import {
-  TEXT_CHANGED
-} from '../Actions/types';
+import { TEXT_CHANGED_SUCCESS } from '../types';
 
-/* Remember that TEXT_CHANGED should be defined and must have a value otherwise it
+/* Remember that TEXT_CHANGED_SUCCESS should be defined and must have a value otherwise it
 will be undefined and no error would popup and in the reducer we will have a
 case of undefined
 
@@ -13,13 +11,13 @@ which is not what we want.
 */
 
 const INITIAL_STATE = {
-  text: ''
+	text: ''
 };
 
-export default ( state=INITIAL_STATE, action ) => {
-  switch (action.type) {
-    case TEXT_CHANGED:
-       /*
+export default (state = INITIAL_STATE, action) => {
+	switch (action.type) {
+		case TEXT_CHANGED_SUCCESS:
+			/*
           slice of state (that the reducer last published)  +  action
                          |
                     into the reducer
@@ -39,13 +37,13 @@ export default ( state=INITIAL_STATE, action ) => {
        overwritten with a new value.
        */
 
-       return { ...state, text: action.payload }
+			return { ...state, text: action.payload };
 
-    default:
-      /*
+		default:
+			/*
       We will just return the state. Return the initial state when nothing changes
       hence no re-rendering.
       */
-      return state
-  }
+			return state;
+	}
 };

@@ -1,25 +1,19 @@
 import React, { Component } from 'react';
-import {
-  AppRegistry,
-  TextInput,
-} from 'react-native';
+import { AppRegistry } from 'react-native';
 
 import { Provider } from 'react-redux';
-import store from './Store';
+import store from './redux/store';
 
-import CustomTextInput from './Components/CustomTextInput';
+import CustomTextInput from './components/CustomTextInput';
 
 class App extends Component {
-
-  render() {
-    return (
-	    <Provider store={store}>
-			<CustomTextInput />
-	    </Provider>
-
-    );
-  }
+	render() {
+		return (
+			<Provider store={store}>
+				<CustomTextInput />
+			</Provider>
+		);
+	}
 }
-
 
 export default App;
