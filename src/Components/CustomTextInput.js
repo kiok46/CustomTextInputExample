@@ -29,6 +29,4 @@ const mapStateToProps = state => {
 	};
 };
 
-// Pass it as the first argument to our connect function.
-
 export default connect(mapStateToProps, actions)(CustomTextInput);

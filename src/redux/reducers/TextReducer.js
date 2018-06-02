@@ -37,7 +37,7 @@ export default (state = INITIAL_STATE, action) => {
        overwritten with a new value.
        */
 
-			return { ...state, text: action.payload };
+			return { ...state, text: action.text };
 
 		default:
 			/*

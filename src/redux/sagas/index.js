@@ -1,6 +1,6 @@
 import { all, fork } from 'redux-saga/effects';
-import TextSagas from './TextSagas';
+import CustomTextInputSagas from './CustomTextInputSagas';
 
 export default function* rootSaga() {
-	yield all([fork(TextSagas.watcherTextChanged)]);
+	yield all([fork(CustomTextInputSagas.watcherTextChanged)]);
 }

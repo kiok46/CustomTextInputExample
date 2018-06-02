@@ -5,7 +5,6 @@ import reducers from '../reducers';
 import rootSaga from '../sagas';
 
 const middleWare = [];
-//middleWare.push(loggerMiddleware);
 
 // Setup Redux-Saga
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor });

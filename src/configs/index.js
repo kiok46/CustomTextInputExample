@@ -7,15 +7,11 @@ Reactotron.configure({ name: 'CustomTextInputExample' })
 	.use(apisaucePlugin())
 	.use(sagaPlugin());
 
-const enableReactotron = (enable = true, config = {}) => {
-	if (enable) {
-		Reactotron.connect();
-		Reactotron.clear();
-	}
-};
+Reactotron.connect();
+Reactotron.clear();
 
 const sagaMonitor = Reactotron.createSagaMonitor();
 
 console.tron = Reactotron;
 
-module.exports = { enableReactotron, sagaMonitor };
+module.exports = { sagaMonitor };
